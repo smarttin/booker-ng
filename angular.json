@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -36,6 +37,11 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "src/styles"
+                ]
+              },
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -120,6 +126,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "booker-ng"
+    }
+  },
+  "defaultProject": "booker-ng",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
