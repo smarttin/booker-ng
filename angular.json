@@ -27,6 +27,11 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -37,11 +42,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "stylePreprocessorOptions": {
-                "includePaths": [
-                  "src/styles"
-                ]
-              },
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
