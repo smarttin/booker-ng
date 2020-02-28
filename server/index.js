@@ -6,7 +6,7 @@ const rentalRoutes = require('./routes/rentals');
 const FakeDb = require("./fake-db");
 
 mongoose
-  .connect(config.DB_URI, {
+  .connect(config.DB_URI_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
