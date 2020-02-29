@@ -9,6 +9,7 @@ import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 import { RentalRoutingModule } from './rental-routing.module';
 import { UppercasePipe } from '../Common/pipes/uppercase.pipe';
+import { MapModule } from '../Common/map/map.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { UppercasePipe } from '../Common/pipes/uppercase.pipe';
     CommonModule,
     RentalRoutingModule,
     HttpClientModule,
-    NgPipesModule
+    NgPipesModule,
+    MapModule
   ],
   providers: []
 })
