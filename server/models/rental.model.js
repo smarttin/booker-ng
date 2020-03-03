@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const User = require("./user.model");
+
 
 const rentalSchema = new mongoose.Schema({
   title: {
@@ -22,7 +24,8 @@ const rentalSchema = new mongoose.Schema({
   shared: Boolean,
   description: { type: String, required: true },
   dailyRate: Number,
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: User }
 });
 
 module.exports = mongoose.model( 'Rental', rentalSchema );
