@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RentalComponent } from './rental.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
+import { AuthGuard } from '../auth/shared/auth.guard';
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: RentalComponent,
     children: [
       { path: '', component: RentalListComponent },
-      { path: ':rentalId', component: RentalDetailComponent}
+      { path: ':rentalId', component: RentalDetailComponent, canActivate: [AuthGuard]}
     ]
   }
 ];

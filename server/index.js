@@ -14,7 +14,7 @@ mongoose
   })
   .then(() => {
     const fakeDb = new FakeDb();
-    fakeDb.seedDb();
+    // fakeDb.seedDb();
     console.log("Connected to database!");
   })
   .catch(err => {

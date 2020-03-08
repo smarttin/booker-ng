@@ -4,7 +4,7 @@ const User = require("../models/user.model");
 const { login, register } = require("../controllers/user.controller");
 
 
-router.post("/auth", login);
+router.post("/login", login);
 
 router.post("/register", register);
 
