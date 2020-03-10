@@ -74,7 +74,7 @@ const authMiddleware = function (req, res, next) {
   }
 
   const user = parseToken(token);
-  console.log(user);
+  // console.log(user);
   User.findById(user.userId, function (err, user) {
     if (err) {
       return res.status(422).send({errors: normalizeErrors(err.errors)});

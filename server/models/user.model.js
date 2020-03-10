@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Rental = require("./rental.model");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
@@ -23,7 +22,8 @@ const userSchema = new mongoose.Schema({
     min: [4, "Too short, min is 4 characters"],
     max: [32, "Too long, max is 32 characters"]
   },
-  rentals: [{ type: mongoose.Schema.Types.ObjectId, ref: Rental }]
+  rentals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Rental' }],
+  bookings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Booking' }]
 });
 
 userSchema.methods.hasSamePassword = function(requestedPassword) {

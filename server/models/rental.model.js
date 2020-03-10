@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const User = require("./user.model");
-
 
 const rentalSchema = new mongoose.Schema({
   title: {
@@ -19,13 +17,14 @@ const rentalSchema = new mongoose.Schema({
     required: true,
     lowercase: true
   },
-  image: { type: String, required: true},
+  image: { type: String, required: true },
   bedrooms: Number,
   shared: Boolean,
   description: { type: String, required: true },
   dailyRate: Number,
   createdAt: { type: Date, default: Date.now },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: User }
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  bookings: [{ type: mongoose.Schema.Types.ObjectId, ref: "Booking" }]
 });
 
-module.exports = mongoose.model( 'Rental', rentalSchema );
+module.exports = mongoose.model("Rental", rentalSchema);
