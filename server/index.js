@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const config = require("./config/dev");
 const rentalRoutes = require('./routes/rentals.route');
 const userRoutes = require('./routes/users.route');
+const bookingRoutes = require('./routes/booking.route');
 const FakeDb = require("./fake-db"); 
 
 mongoose
@@ -26,6 +27,7 @@ app.use(bodyParser.json());
 
 app.use('/api/v1/rentals', rentalRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/bookings', bookingRoutes);
 
 const port = process.env.PORT || 3000;
 
