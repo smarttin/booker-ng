@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule } from 'ngx-pipes';
+import { FormsModule } from '@angular/forms';
 
 import { RentalComponent } from './rental.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
@@ -28,7 +29,8 @@ import { RentalDetailBookingComponent } from './rental-detail/rental-detail-book
     HttpClientModule,
     NgPipesModule,
     MapModule,
-    Daterangepicker
+    Daterangepicker,
+    FormsModule
   ],
   providers: []
 })
