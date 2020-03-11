@@ -2,6 +2,8 @@ const Rental = require('../models/rental.model');
 const User = require('../models/user.model');
 const Booking = require('../models/booking.model');
 const moment = require('moment');
+const { normalizeErrors } = require('../helpers/mongoose');
+
 
 const createBooking = (req, res) => {
   const { startAt, endAt, totalPrice, guests, days, rental } = req.body;
