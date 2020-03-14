@@ -7,6 +7,7 @@ import { Rental } from '../../shared/rental.model';
 import { BookingService } from 'src/app/booking/shared/booking.service';
 import { ToastrService } from 'ngx-toastr';
 import { DaterangepickerComponent } from 'ng2-daterangepicker';
+import { AuthService } from 'src/app/auth/shared/auth.service';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -37,7 +38,8 @@ export class RentalDetailBookingComponent implements OnInit {
     private helperService: HelperServcie,
     private modalService: NgbModal,
     private bookingService: BookingService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public authService: AuthService
   ) { }
 
   ngOnInit() {

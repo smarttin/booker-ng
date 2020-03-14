@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private route: Router) { }
 
   ngOnInit() {
   }
@@ -20,6 +20,10 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.route.navigate(['/login']);
+  }
+
+  search(city: string) {
+    city ? this.route.navigate([`/rentals/${city}/homes`]) : this.route.navigate(['/rentals']);
   }
 }
