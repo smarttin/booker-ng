@@ -41,10 +41,10 @@ const getRental = (req, res) => {
 };
 
 const createRental = (req, res) => {
-  const { title, city, street,category, image, bedroom, shared, description, dailyRate } = req.body;
+  const { title, city, street,category, image, bedrooms, shared, description, dailyRate } = req.body;
   const user = res.locals.user;
 
-  const rental = new Rental({title, city, street,category, image, bedroom, shared, description, dailyRate})
+  const rental = new Rental({title, city, street,category, image, bedrooms, shared, description, dailyRate})
   rental.user = user;
   Rental.create(rental, (err, newRental) => {
     if (err) {
