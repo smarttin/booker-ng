@@ -9,11 +9,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Common/header/header.component';
 import { RentalModule } from './rental/rental.module';
 import { AuthModule } from './auth/auth.module';
+import { ManageModule } from './manage/manage.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,8 +23,8 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     NgbModalModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
-
+    ToastrModule.forRoot(),
+    ManageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
