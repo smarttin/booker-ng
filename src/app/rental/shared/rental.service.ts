@@ -25,4 +25,12 @@ export class RentalService {
   createRental(rental: Rental): Observable<any> {
     return this.http.post('/api/v1/rentals', rental);
   }
+
+  getUserRentals(): Observable<Rental[]> {
+    return this.http.get<Rental[]>('/api/v1/rentals/manage');
+  }
+
+  deleteRental(rentalId: string): Observable<any> {
+    return this.http.delete(`/api/v1/rentals/${rentalId}`);
+  }
 }

@@ -6,7 +6,7 @@
 
 
   .bwm-search {
-    height: 50px;
+    height: 40px;
     width: 300px;
   }
 
@@ -17,6 +17,12 @@
     letter-spacing: 1px;
     color: $main-color;
     font-weight: 500;
+
+    img {
+      // margin-top: 15px;
+      margin-left: -15px;
+      height: 20px;
+    }
   }
 
 

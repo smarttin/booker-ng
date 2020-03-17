@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['/rentals']">Booker</a>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/rentals']">BookiT <img src="favicon.ico" alt=""></a>
   <div class="form-inline">
     <input
       #citySearch
@@ -51,6 +51,10 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" [routerLink]="['/rentals/new']">Create Rental</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/manage/rentals']">Manage Rentals</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/manage/bookings']">Manage Bookings</a>
           </div>
         </div>
         

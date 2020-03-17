@@ -1,0 +1,28 @@
+@import 'variables';
+
+.btn-ghost {
+  background-color: transparent;
+  color: $main-color;
+  border: 1px solid $main-color;
+  font-size: 12px;
+}
+
+.btn-bwm {
+  background-color: $main-color;
+  border-color: $main-color;
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+
+  &:hover, &:focus, &:active {
+    border-color: $main-color !important;
+    background-color: $main-color !important;
+  }
+}
+
+.bookings-inner-container {
+  p {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+}
